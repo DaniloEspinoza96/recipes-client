@@ -61,10 +61,13 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
-    // Room
-    implementation "androidx.room:room-runtime:$version_room"
-    kapt "androidx.room:room-compiler:$version_room"
-    implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
-    implementation "androidx.room:room-ktx:$version_room"
+//    // Room
+//    implementation "androidx.room:room-runtime:$version_room"
+//    kapt "androidx.room:room-compiler:$version_room"
+//    implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
+//    implementation "androidx.room:room-ktx:$version_room"
+
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 
 }
