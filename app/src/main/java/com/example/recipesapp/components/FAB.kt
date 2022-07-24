@@ -13,9 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FloatingActionButton(modifier: Modifier) {
+fun FloatingActionButton(
+    modifier: Modifier,
+    onFabClicked: () -> Unit
+) {
     Button(
-        onClick = { /*TODO*/ },
+        onClick = onFabClicked,
         shape = CircleShape,
         modifier = modifier
             .padding(24.dp)

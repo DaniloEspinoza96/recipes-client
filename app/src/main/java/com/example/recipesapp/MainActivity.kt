@@ -33,14 +33,16 @@ fun RecipesApp() {
             backStackEntry.value?.destination?.route
         )
 
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colors.background
+        Scaffold(
+            topBar = { Header(title = currentScreen.title) }
         ) {
-            Scaffold(
-                topBar = { Header(title = currentScreen.title) }
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colors.background
             ) {
-                MainNavHost(navController)
+                MainNavHost(
+                    navController
+                )
             }
         }
     }

@@ -19,7 +19,8 @@ import com.example.recipesapp.data.mockRecipes
 
 @Composable
 fun Home(
-    recipes: List<Recipe>
+    recipes: List<Recipe>,
+    onFabClicked: () -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -28,12 +29,15 @@ fun Home(
     ) {
         Spacer(modifier = Modifier.padding(top = 4.dp))
         RecipesList(recipes)
-        FloatingActionButton(modifier = Modifier.align(Alignment.BottomCenter))
+        FloatingActionButton(
+            modifier = Modifier.align(Alignment.BottomCenter),
+            onFabClicked = onFabClicked
+        )
     }
 }
 
 @Preview
 @Composable
 fun HomePreview() {
-    Home(mockRecipes)
+    Home(mockRecipes, {})
 }
